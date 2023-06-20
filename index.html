@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+    <style>
+      .main {
+        display: flex;
+        padding-left: 5%;
+      }
+
+      .input > * {
+        flex: 1;
+        padding: 1rem 1rem;
+      }
+      #secondary {
+        flex: 2;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <h1 class="glow">Card Collection</h1>
+    <main class="main">
+      <div class="input">
+        <form onsubmit="onSubmitCarta(event)">
+          <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text">
+          </div>
+          <div>
+            <label for="cartone">Cartone:</label>
+            <input id="cartone" name="cartone" type="text">
+          </div>
+          <div>
+            <label for="immagine">Immagine:</label>
+            <input id="immagine" name="immagine" type="text" required>
+          </div>
+
+          <div>
+            <label for="ruolo">Ruolo:</label>
+            <select id="ruolo" name="ruolo" required>
+              <option value="protagonista">
+                Protagonista
+              </option>
+              <option value="antagonista">
+                Antagonista
+              </option>
+              <option value="personaggio secondario">
+                Personaggio Secondario
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="potenza">Potenza:</label>
+            <select id="potenza" name="potenza" required>
+              <option value="1">
+                1
+              </option>
+              <option value="2">
+                2
+              </option>
+              <option value="3">
+                3
+              </option>
+              <option value="4">
+                4
+              </option>
+              <option value="5">
+                5
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="descrizione">Descrizione:</label>
+            <input id="descrizione" name="descrizione" type="text">
+          </div>
+          <button type="submit" id="submit-btn">Aggiungi</button>
+        </form>
+      </div> 
+    <section id="secondary">
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="card-box"> 
+    </div>
+  </section>
+  </main>
+  <div  id="paragrafo"></div>
+  </body>
+</html>
+
